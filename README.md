@@ -113,3 +113,47 @@ Another idea that can be employed to improve the quality of the data that is cur
 4. **Employing Specialized Biomedical Language Models**  
 Specialized models can be used for this task as these are models that have already been pre-trained on large amounts of data and also have specialized architectures for medical QA systems.
 Recently, the generative biomedical models have shown a lot of promise for generative tasks related to medical data such as question answering. Consider BioGPT which achieved 78.2% accuracy on PubMedQA, creating a new record compared to previous models. The strong learning capabilities of transformer-based architectures such as GPT models should be brought into the sphere of medical data-related generative tasks. A lot of these advanced models can be fine tuned on datasets through the APIs provided by companies like OpenAI. Also, the application of the advanced attention mechanisms within the T5 model family can add as another improvement in the existing pipeline. Also a larger version of the FLAN-T5 model can be fine-tuned for better performance.
+
+# Example Interactions
+
+
+Below are a few sample interactions between the fine-tuned FLAN-T5 model and medical questions. These illustrate the model's ability to generate relevant responses based on learned context.
+The responses shown in the example interactions were generated using the `.generate()` method from the Hugging Face Transformers library with the following parameters:
+
+```python
+with torch.no_grad():
+    output_ids = model.generate(
+        **inputs,
+        max_length=128,
+        num_beams=5,
+        early_stopping=True,
+        no_repeat_ngram_size=3,
+        repetition_penalty=1.5
+    )
+---
+These parameters were added to penalize the model for generating repetitive terms and sentences during inference.
+
+
+**Question:** What is hypertension and what blood pressure readings indicate this condition?  
+**Answer:** Hypertension is a condition that affects the blood pressure of the body. It is caused by a change (mutation) in the X-linked gene, which is involved in the normal flow of blood to the body's bloodstream. This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with hypertension typically have one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.
+
+---
+
+**Question:** What are the main functions of the kidneys in the human body?  
+**Answer:**  
+- The kidneys are made up of many different organs, including the kidneys, tissues, and organs.  
+- There are three main functions of kidneys in the body:  
+  - Kidneys are part of the body's immune system, which helps fight infection and protects the body from infection.  
+  - It is important to maintain a healthy immune system and to prevent infections.  
+  - Causes of kidney disease include chronic kidney disease, hypertension, decreased levels of calcium in the blood, high levels of potassium in the urine, and increased amounts of...
+
+---
+
+
+
+**Question:** How does insulin work in controlling blood sugar levels?  
+**Answer:** Insulin plays a role in controlling blood sugar levels. Insulin helps control the amount of sugar in your blood. This means that you can use it to control your blood sugar level. If you have diabetes, you may want to think about taking part in a blood glucose test. You can take part in an insulin test to find out if your blood glucose levels are too high or too low. For example, you might want to talk with your doctor if you think you may be at risk for diabetes.
+
+# Declaration
+
+I confirm that this project was completed independently without the assistance of third-party AI systems (such as OpenAI, Claude, or similar tools) in any part of the solution. Any references made were to publicly available documentation or open-source code as permitted.
