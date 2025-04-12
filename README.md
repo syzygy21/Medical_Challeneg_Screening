@@ -120,7 +120,7 @@ Recently, the generative biomedical models have shown a lot of promise for gener
 Below are a few sample interactions between the fine-tuned FLAN-T5 model and medical questions. These illustrate the model's ability to generate relevant responses based on learned context.
 The responses shown in the example interactions were generated using the `.generate()` method from the Hugging Face Transformers library with the following parameters:
 
-```python
+
 with torch.no_grad():
     output_ids = model.generate(
         **inputs,
@@ -130,7 +130,7 @@ with torch.no_grad():
         no_repeat_ngram_size=3,
         repetition_penalty=1.5
     )
----
+
 These parameters were added to penalize the model for generating repetitive terms and sentences during inference.
 
 
