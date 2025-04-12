@@ -32,8 +32,7 @@ The model demonstrated strong performance on the medical dataset, which was evid
 
 ## Reasoning for using the ROUGE L Metric for Evaluation and Early Stopping
 
-ROUGE L looks at the losngest common subsequence between the generation and the ground truth. This effectively evaluates the sequential nature of the medical answer that is generated which can force the model to adapt to a generation 
-style to produce outputs that have the same flow as that of the answers in the dataset. This is crucial as for a sensitive task like medical Q and A as the answers are supposed to be generated in a manner that is easy to read and understand making it easier for the uder to grasp the information. This makes the model follow the flow of the answers in training dataset more closely and a good dataset can be further very helpful in this scenario.
+ROUGE-L looks at the longest common subsequence between the generation and the ground truth. This effectively evaluates the sequential nature of the medical answer that is generated, which can force the model to adapt to a generation style that produces outputs with the same flow as the answers in the dataset. This is crucial for a sensitive task like medical Q&A, as the answers are expected to be generated in a manner that is easy to read and understand, making it easier for the user to grasp the information. This encourages the model to follow the flow of the answers in the training dataset more closely, and a good dataset can be particularly helpful in this scenario.
 
 # Model Selection
 
