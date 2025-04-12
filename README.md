@@ -98,24 +98,18 @@ The FLAN-T5 model was selected as the optimal foundation for our medical questio
 
 1. **Implementing RAG-Based Architecture**  
 RAG-based architectures are important because they enhance the efficiency of the Gen AI and NLP models by first extracting relevant and factual information from external sources or existing datasets/databases. Integration of a retrieval system along with a fine-tuned model like FLAN-T5 could significantly improve the performance of the whole system.
-
 There are several very advanced RAG architectures especially for medical question answering such as the i-MedRAG where the model can ask follow-up queries based on previous information-seeking attempts, forming reasoning chains for complex medical questions. Creation of a knowledge base is very crucial for this task.
 
 2. **Evaluation Enhancements**  
 The current approach uses the ROUGE metrics which have limitations for medical QA tasks.
-
 The approach can be modified to take into account some domain-specific metrics such as answer accuracy, contextual relevancy, and hallucination detection. The metrics that evaluate these should be built such that they are specific to medical content.
-
 Another approach that can be taken for evaluation enhancements is to use expert validation or human-in-the-loop training. Medical experts can be brought in to check the accuracy of the information given by the models upon prompting. This can be further incorporated into the training loop itself through techniques such as reinforcement learning through human feedback.
 
 3. **Data Processing Improvements**  
 The approach currently employs data preprocessing techniques that are minimal for the task. There can be better data preprocessing techniques that should be employed.
-
 For example, application of biomedical named entity recognition (bNER) to identify important medical concepts like diseases, treatments, and anatomical entities in both questions and answers can be done. This is a domain-specific technique that can significantly improve model training as the more advanced models can be trained on a dataset that provides more information which can translate to useful knowledge.
-
 Another idea that can be employed to improve the quality of the data that is currently being used is filtering out the datapoints with answers that are unrelated to the question asked. This could be implemented by looping through the dataset and picking up each example and looking at the context of the question asked and the context of the respective answer and seeing if they match. Usage of open-source LLM architectures available within the `transformers` module from Hugging Face can be used for this task.
 
 4. **Employing Specialized Biomedical Language Models**  
 Specialized models can be used for this task as these are models that have already been pre-trained on large amounts of data and also have specialized architectures for medical QA systems.
-
 Recently, the generative biomedical models have shown a lot of promise for generative tasks related to medical data such as question answering. Consider BioGPT which achieved 78.2% accuracy on PubMedQA, creating a new record compared to previous models. The strong learning capabilities of transformer-based architectures such as GPT models should be brought into the sphere of medical data-related generative tasks. Also, the application of the advanced attention mechanisms within the T5 model family can add as another improvement in the existing pipeline.
