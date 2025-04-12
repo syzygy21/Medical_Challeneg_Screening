@@ -146,7 +146,7 @@ These parameters were added to penalize the model for generating repetitive term
 
 # Results Reproduction
 
-The repo contains a file named inference.py that can be downloaded. Also download the model weights file from this [link](https://drive.google.com/file/d/1K7wSLg91FYTae37DDGNrBtGI0K4uM5yo/view?usp=sharing)
+The repo contains a file named inference.py that can be downloaded. Also download the model weights file from this [link](https://drive.google.com/file/d/1K7wSLg91FYTae37DDGNrBtGI0K4uM5yo/view?usp=sharing). You will get a zip file named best_models_weights. Extract the zip file
 
 ## Create and Activate a Virtual Environment
 ```bash
@@ -161,9 +161,9 @@ pip install torch==2.0.1 transformers==4.51.2 datasets==3.5.0 tqdm==4.67.1 numpy
 ## Run the Inference Script
 
 ```bash
-# Please note that you will have to provide the path to the downloaded weights
+# Please note that you will have to provide the path to the downloaded and unzipped folder for loading weights
 # Also make sure to be in the right directory to run the inference code
-python inference.py --model_path "path/to/checkpoint" --question "What is hypertension?"
+python inference.py --model_path "path/to/root_of_downloaded_folder" --question "What is hypertension?"
 ```
 
 # Declaration
