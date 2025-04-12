@@ -144,6 +144,28 @@ These parameters were added to penalize the model for generating repetitive term
 **Question:** How does insulin work in controlling blood sugar levels?  
 **Answer:** Insulin plays a role in controlling blood sugar levels. Insulin helps control the amount of sugar in your blood. This means that you can use it to control your blood sugar level. If you have diabetes, you may want to think about taking part in a blood glucose test. You can take part in an insulin test to find out if your blood glucose levels are too high or too low. For example, you might want to talk with your doctor if you think you may be at risk for diabetes.
 
+# Results Reproduction
+
+The repo contains a file named inference.py that can be downloaded. Also download the model weights file named best_model_weights. Follow the steps below to run the file for testing
+
+## Create and Activate a Virtual Environment
+```bash
+conda create -n medical-qa python=3.10
+conda activate medical-qa
+```
+## Install the Required Packages (For a safe setup)
+
+```bash
+pip install torch==2.0.1 transformers==4.51.2 datasets==3.5.0 tqdm==4.67.1 numpy==1.26.4 evaluate==0.4.3
+```
+## Run the Inference Script
+
+```bash
+# Please note that you will have to provide the path to the downloaded weights
+# Also make sure to be in the right directory to run the inference code
+python inference.py --model_path "path/to/checkpoint" --question "What is hypertension?"
+```
+
 # Declaration
 
 I confirm that this project was completed independently without the assistance of third-party AI systems (such as OpenAI, Claude, or similar tools) in any part of the solution. Any references made were to publicly available documentation or open-source code as permitted.
