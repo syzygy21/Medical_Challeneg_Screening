@@ -30,6 +30,11 @@ The approach includes:
 
 The model demonstrated strong performance on the medical dataset, which was evident with the steady increase in the ROUGE scores and the improvement in validation loss throughout the training process, demonstrating the model’s capabilities of producing relevant and generalizable outputs.
 
+## Reasoning for using the ROUGE L Metric for Evaluation and Early Stopping
+
+ROUGE L looks at the losngest common subsequence between the generation and the ground truth. This effectively evaluates the sequential nature of the medical answer that is generated which can force the model to adapt to a generation 
+style to produce outputs that have the same flow as that of the answers in the dataset. This is crucial as for a sensitive task like medical Q and A as the answers are supposed to be generated in a manner that is easy to read and understand making it easier for the uder to grasp the information. This makes the model follow the flow of the answers in training dataset more closely and a good dataset can be further very helpful in this scenario.
+
 # Model Selection
 
 The FLAN-T5 model was selected as the optimal foundation for our medical question-answering system based on the following considerations:
@@ -70,7 +75,7 @@ The FLAN-T5 model was selected as the optimal foundation for our medical questio
 
 2. **Entity Handling Constraints**: The model lacks specialized mechanisms for identifying and reasoning about medical entities (diseases, treatments, symptoms), potentially leading to imprecise or incomplete answers. This is another reason why incorporating medical entities across all examples will be very beneficial for model training.
 
-3. **Evaluation Metric Limitation**: ROUGE scores may not capture adequately the medical accuracy and clinical relevance of generated answers. This is a drawback as the current approach uses the ROUGE-L score as a method for early stopping.
+3. **Evaluation Metric Limitation**: ROUGE scores may not capture adequately the medical accuracy and clinical relevance of generated answers. This is a drawback as the current approach uses the ROUGE-L score as a method for early stopping. Also metrics such as BERTScore leverage contextual embeddings to evaluate semantic similarity beyond surface-level matching. This is very useful because the model learns through context and not just sequence matching.
 
 4. **Simple Retrieval Mechanism**: The approach that is currently being used is a simple training on the question-answer pairs in the dataset. If the model is equipped with information retrieval capability then its performance could substantially improve when it comes to complex reasoning or domain-specific medical knowledge. Such a retrieval system requires an existing knowledge base.
 
