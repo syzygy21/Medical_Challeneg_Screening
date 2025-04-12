@@ -133,22 +133,12 @@ with torch.no_grad():
 
 These parameters were added to penalize the model for generating repetitive terms and sentences during inference.
 
-
 **Question:** What is hypertension and what blood pressure readings indicate this condition?  
 **Answer:** Hypertension is a condition that affects the blood pressure of the body. It is caused by a change (mutation) in the X-linked gene, which is involved in the normal flow of blood to the body's bloodstream. This condition is inherited in an autosomal recessive pattern, which means both copies of the gene in each cell have mutations. The parents of an individual with hypertension typically have one copy of the mutated gene, but they typically do not show signs and symptoms of the condition.
 
----
 
 **Question:** What are the main functions of the kidneys in the human body?  
-**Answer:**  
-- The kidneys are made up of many different organs, including the kidneys, tissues, and organs.  
-- There are three main functions of kidneys in the body:  
-  - Kidneys are part of the body's immune system, which helps fight infection and protects the body from infection.  
-  - It is important to maintain a healthy immune system and to prevent infections.  
-  - Causes of kidney disease include chronic kidney disease, hypertension, decreased levels of calcium in the blood, high levels of potassium in the urine, and increased amounts of...
-
----
-
+**Answer:** Key Points - The kidneys are made up of many different organs, including the kidneys, tissues, and organs. - There are three main functions of kidneys in the body: - Kidneys are part of the body's immune system, which helps fight infection and protects the body from infection - It is important to maintain a healthy immune system and to prevent infections - Causes of kidney disease include - Chronic kidney disease - Hypertension - Decreased levels of calcium in the blood - High levels of potassium in the urine - Increased amounts of
 
 
 **Question:** How does insulin work in controlling blood sugar levels?  
