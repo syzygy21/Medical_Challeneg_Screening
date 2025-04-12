@@ -146,7 +146,7 @@ These parameters were added to penalize the model for generating repetitive term
 
 # Results Reproduction
 
-The repo contains a file named inference.py that can be downloaded. Also download the model weights file named best_model_weights. Follow the steps below to run the file for testing
+The repo contains a file named inference.py that can be downloaded. Also download the model weights file from this [link](https://drive.google.com/file/d/1K7wSLg91FYTae37DDGNrBtGI0K4uM5yo/view?usp=sharing)
 
 ## Create and Activate a Virtual Environment
 ```bash
